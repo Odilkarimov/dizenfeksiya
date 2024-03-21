@@ -14,3 +14,22 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+
+.bg-disinfection {
+  background-image: url(../src/assets/disinfection.png);
+  max-width: 1360px;
+  max-height: 600px;
+}
+
+.bg_dizinf {
+  background-image: url(../src/assets/dzimg2.png);
+}
+
+.bg_section {
+  background: radial-gradient(95.44% 490.36% at 92.87% 11.25%, #33A9FF 0%, #33FFF3 100%) ;
+
+}
+.bg_section2 {
+  background: radial-gradient(58.39% 328.01% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, 0.2) 100%);
+
+}

@@ -24,7 +24,7 @@ const Navbar = () => {
         </ul>
       </div>
       <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center">
-        <h3 className="text-[20px]">Aloqa</h3>
+        <h3 className="text-[20px]">Kirish</h3>
       </button>
     </div>
   );
