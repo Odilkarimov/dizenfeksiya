@@ -10,7 +10,6 @@ import Obrazovaniya from "../../../assets/obrazovaniye_s.png";
 import Icon3d from "../../../assets/3dicons.png";
 import Person from "../../../assets/person.png";
 
-
 import { Accordion } from "flowbite-react";
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 
