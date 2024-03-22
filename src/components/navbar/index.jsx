@@ -1,4 +1,6 @@
 import Logo from "../../assets/Union.png";
+import Menu from "../../assets/menu.svg";
+import Close from "../../assets/close.svg";
 
 const Navbar = () => {
   return (
@@ -13,19 +15,22 @@ const Navbar = () => {
             <a href="#asosiy">Asosiy</a>
           </li>
           <li>
-            <a href="">Biz xaqimizda</a>
+            <a href="#biz">Biz xaqimizda</a>
           </li>
           <li>
-            <a href="">Hizmatlar</a>
+            <a href="#xizmat">Hizmatlar</a>
           </li>
           <li>
-            <a href="">Faq</a>
+            <a href="#faq">Faq</a>
           </li>
         </ul>
       </div>
-      <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center">
-        <h3 className="text-[20px]">Kirish</h3>
-      </button>
+      <div></div>
+      <div>
+        <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center max-md:hidden">
+          <h3 className="text-[20px]">Kirish</h3>
+        </button>
+      </div>
     </div>
   );
 };

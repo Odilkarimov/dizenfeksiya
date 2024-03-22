@@ -10,6 +10,7 @@ import Obrazovaniya from "../../../assets/obrazovaniye_s.png";
 import Icon3d from "../../../assets/3dicons.png";
 import Person from "../../../assets/person.png";
 
+
 import { Accordion } from "flowbite-react";
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 
@@ -43,7 +44,10 @@ const Home = () => {
       <div className="mt-[10px] max-md:hidden">
         <img data-aos="flip-right" className="mt-[100px]" src={Dzimg} alt="" />
       </div>
-      <div className="w-full flex flex-col gap-[100px] max-md:mt-[100px]">
+      <div
+        id="biz"
+        className="w-full flex flex-col gap-[100px] max-md:mt-[100px]"
+      >
         <div>
           <h2 data-aos="flip-up" className="text-[40px] font-bold">
             Avfzalliklarimiz
@@ -116,7 +120,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div id="xizmat">
         <div className="mt-[30px]">
           <h2 className="text-[52px] text-bold">Xizmatlar</h2>
           <p className="text-[24px]">
@@ -214,7 +218,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="w-full border-t mt-[80px] max-md:mt-[20px]">
+      <div id="faq" className="w-full border-t mt-[80px] max-md:mt-[20px]">
         <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[30px]">
           <Accordion.Panel>
             <Accordion.Title className="text-[20px]">
@@ -256,8 +260,11 @@ const Home = () => {
           </Accordion.Panel>
         </Accordion>
       </div>
-      <div className="bg_section2 flex px-[30px] py-[20px] items-center justify-center rounded-lg mt-[30px]">
-        <div className="bg-[#fff] rounded-2xl px-[40px] py-[30px]">
+      <div className="bg_section2 flex px-[30px] items-center justify-around rounded-lg mt-[30px] max-w-[1300px] w-full max-lg:py-[50px]">
+        <div
+          data-aos="fade-up-right"
+          className="bg-[#fff] rounded-2xl max-md:w-full max-w-[450px] w-full px-[20px] py-[20px]"
+        >
           <h2 className="text-[30px] font-bold">
             Malumotingizni <br /> qoldiring
           </h2>
@@ -283,12 +290,8 @@ const Home = () => {
             </Button>
           </form>
         </div>
-        <div className="flex items-center justify-center max-sm:hidden">
-          <h2 className="text-[24px] text-[#FAFAFA] ml-[100px] mt-[-150px] font-semibold max-lg:hidden">
-            Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-            talaygina
-          </h2>
-          <img className="max-md:hidden" src={Person} alt="" />
+        <div className="max-lg:hidden">
+          <img src={Person} alt="" />
         </div>
       </div>
     </div>
