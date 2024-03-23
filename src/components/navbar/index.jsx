@@ -9,6 +9,7 @@ import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import List from "@mui/material/List";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import { Button } from "flowbite-react";
 
 const Navbar = () => {
   const changelang = (lang) => {
@@ -51,6 +52,9 @@ const Navbar = () => {
           <img src={Close} width={40} alt="" />
         </div>
         <div className="flex flex-col items-center justify-center gap-[40px]">
+          <div>
+            <Button>salom</Button>
+          </div>
           <ul className="flex flex-col items-center justify-center gap-[20px]">
             <li className="text-[20px]">
               <a href="#asosiy">{t("navbar.navtext1")}</a>
@@ -66,7 +70,7 @@ const Navbar = () => {
             </li>
           </ul>
           <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center ">
-            <h3 className="text-[20px]">Bog'lanish</h3>
+            <h3 className="text-[20px]">{t("button.btn")}</h3>
           </button>
         </div>
       </List>
@@ -78,26 +82,29 @@ const Navbar = () => {
       <div className="flex items-center justify-between mt-[20px] py-[20px] px-[20px]">
         <div className="flex">
           <img src={Logo} alt="Dizinfeksiya logo" />
-          <h3>Dizinfeksiya</h3>
+          <h3 className="text-[35px] font-bold">Dizinfeksiya</h3>
         </div>
         <div>
-          <ul className="flex items-center justify-center gap-[20px] max-md:hidden">
-            <li className="text-[20px]">
+          <ul className="flex items-center justify-center gap-[20px] max-lg:hidden">
+            <li className="text-[20px] hover:text-blue-600 font-semibold">
               <a href="#asosiy">{t("navbar.navtext1")}</a>
             </li>
-            <li className="text-[20px]">
+            <li className="text-[20px] hover:text-blue-600 font-semibold">
               <a href="#biz">{t("navbar.navtext2")}</a>
             </li>
-            <li className="text-[20px]">
+            <li className="text-[20px] hover:text-blue-600 font-semibold">
               <a href="#xizmat">{t("navbar.navtext3")}</a>
             </li>
-            <li className="text-[20px]">
+            <li className="text-[20px] hover:text-blue-600 font-semibold">
               <a href="#faq">{t("navbar.navtext4")}</a>
             </li>
           </ul>
         </div>
         <div className="bg-blue-500">
-          <select onChange={(e) => changelang(e.target.value)}>
+          <select
+            className="max-md:hidden"
+            onChange={(e) => changelang(e.target.value)}
+          >
             <option value="uz">uzb</option>
             <option value="ru">rus</option>
           </select>

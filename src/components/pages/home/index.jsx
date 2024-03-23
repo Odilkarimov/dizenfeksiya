@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex items-center justify-between flex-wrap">
+    <div className="flex items-center justify-between flex-wrap max-md:flex-col">
       <div id="#asosiy">
         <div
           data-aos="fade-right"
@@ -28,11 +28,13 @@ const Home = () => {
             {t("header.headertext")}
           </h1>
           <div className="flex">
-            <p className="flex max-w-[300px]">{t("header.headertext2")}</p>
-            <img className="max-md:hidden" src={Dzn} alt="Dizinfeksiya" />
+            <p className="flex max-w-[300px] text-[20px]">
+              {t("header.headertext2")}
+            </p>
+            <img className="" src={Dzn} alt="Dizinfeksiya" />
           </div>
-          <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[20px]">
-            <h3 className="text-[25px]">{t("button.btn")}</h3>
+          <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[10px] ml-[20px]">
+            <h3 className="text-[25px] ">{t("button.btn")}</h3>
           </button>
         </div>
       </div>
@@ -48,13 +50,13 @@ const Home = () => {
             {t("header.headertext3")}
           </h2>
         </div>
-        <div className="border-t">
-          <ul className="flex items-center justify-between gap-[50px] max-md:px-[20px] flex-wrap mt-[100px] ">
+        <div className="border-t flex">
+          <ul className="flex items-center justify-center max-lg:justify-between gap-[50px] lg:gap-[150px] max-md:px-[20px] flex-wrap mt-[100px] max-lg:flex-col w-full">
             <li
               data-aos="fade-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
-              className="max-w-[300px] max-md:p-[30px] max-md:rounded-[20px] max-md:shadow-2xl"
+              className="p-[30px] lg:max-w-[280px] rounded-[20px] gap-[20px] shadow-2xl border"
             >
               <img src={Mask} alt="avfzallik rasm" />
               <h2 className="text-[24px] font-bold">{t("ul1.textli1")}</h2>
@@ -64,7 +66,7 @@ const Home = () => {
               data-aos="fade-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
-              className="max-w-[300px] max-md:p-[30px] max-md:rounded-[20px] max-md:shadow-2xl"
+              className="p-[30px] rounded-[20px] lg:max-w-[280px] border shadow-2xl"
             >
               <img src={Mask2} alt="avfzallik rasm" />
               <h2 className="text-[24px] font-bold">{t("ul1.textli2")}</h2>
@@ -74,7 +76,7 @@ const Home = () => {
               data-aos="fade-right"
               data-aos-offset="150"
               data-aos-easing="ease-in-sine"
-              className="max-w-[300px] max-md:p-[30px] max-md:rounded-[20px] max-md:shadow-2xl"
+              className=" p-[30px] lg:max-w-[280px] rounded-[20px] border shadow-2xl"
             >
               <img src={Mask3} alt="avfzallik rasm" />
               <h2 className="text-[24px] font-bold">{t("ul1.textli3")}</h2>
@@ -110,10 +112,10 @@ const Home = () => {
           <ul className="flex gap-[40px] flex-col">
             <li
               data-aos="fade-right"
-              className="flex items-start justify-center border-black border rounded-xl gap-[100px] p-[30px] max-md:flex max-md:items-center max-md:justify-center max-md:flex-col"
+              className="flex items-start justify-center border-black border rounded-xl md:gap-[100px] p-[30px] max-md:flex max-md:items-center max-md:justify-center max-md:flex-col"
             >
               <div>
-                <img src={Secimg1} alt="" />
+                <img src={Secimg1} alt="" className="max-md:w-[250px]" />
               </div>
               <div className="flex flex-col gap-[20px]">
                 <h2 className="text-[30px] font-bold">{t("ul2.textli1")}</h2>
@@ -125,7 +127,12 @@ const Home = () => {
               className="flex items-start justify-center border-black border rounded-xl gap-[100px] p-[30px] max-md:flex max-md:items-center max-md:justify-center max-md:flex-col"
             >
               <div>
-                <img src={Secimg2} alt="" width={600} />
+                <img
+                  src={Secimg2}
+                  alt=""
+                  width={600}
+                  className="max-md:w-[250px]"
+                />
               </div>
               <div className="flex flex-col gap-[20px]">
                 <h2 className="text-[30px] font-bold">{t("ul2.textli2")}</h2>
@@ -137,7 +144,12 @@ const Home = () => {
               className="flex items-start justify-center border-black border rounded-xl gap-[100px] p-[30px] max-md:flex max-md:items-center max-md:justify-center max-md:flex-col"
             >
               <div>
-                <img src={Secimg3} alt="" width={600} />
+                <img
+                  src={Secimg3}
+                  alt=""
+                  width={600}
+                  className="max-md:w-[250px]"
+                />
               </div>
               <div className="flex flex-col gap-[20px]">
                 <h2 className="text-[30px] font-bold">{t("ul2.textli3")}</h2>
@@ -147,7 +159,7 @@ const Home = () => {
           </ul>
         </div>
       </div>
-      <div className="bg_section max-w-[1360px] h-full flex items-center justify-between gap-[100px] p-[50px] mt-[100px] rounded-2xl max-md:flex max-md:flex-col">
+      <div className="bg_section max-w-[1300px]  w-full  h-full flex items-center gap-[100px] p-[50px] mt-[100px] rounded-2xl max-md:flex max-md:flex-col">
         <div className="w-[50%] max-md:w-[100%]">
           <img src={Obrazovaniya} alt="" />
         </div>
@@ -165,9 +177,9 @@ const Home = () => {
         </div>
       </div>
       <div id="faq" className="w-full border-t mt-[80px] max-md:mt-[20px]">
-        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[10px] py-[20px] px-[10px]">
+        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[10px] py-[40px] px-[20px]">
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black">
+            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
               {t("accordion.title1")}
             </Accordion.Title>
             <Accordion.Content>
@@ -177,7 +189,7 @@ const Home = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black">
+            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
               {t("accordion.title2")}
             </Accordion.Title>
             <Accordion.Content>
@@ -187,7 +199,7 @@ const Home = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black">
+            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
               {t("accordion.title3")}
             </Accordion.Title>
             <Accordion.Content>
@@ -198,7 +210,7 @@ const Home = () => {
           </Accordion.Panel>
         </Accordion>
       </div>
-      <div className="bg_section2 flex px-[30px] items-center justify-around rounded-lg mt-[30px] max-w-[1300px] w-full max-lg:py-[50px]">
+      <div className="bg_section2 flex px-[30px] items-center justify-around rounded-lg mt-[30px] max-w-[1400px] w-full max-lg:py-[50px]">
         <div
           data-aos="fade-up-right"
           className="bg-[#fff] rounded-2xl max-md:w-full max-w-[450px] w-full px-[20px] py-[20px]"
