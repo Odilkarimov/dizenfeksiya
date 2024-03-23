@@ -52,9 +52,20 @@ const Navbar = () => {
           <img src={Close} width={40} alt="" />
         </div>
         <div className="flex flex-col items-center justify-center gap-[40px]">
-          <div>
-            <Button>salom</Button>
-          </div>
+          <button
+            className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
+            onClick={(e) => changelang(e.target.value)}
+            value="uz"
+          >
+            <h2 className="text-white text-[20px]">uzb</h2>
+          </button>
+          <button
+            className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
+            onClick={(e) => changelang(e.target.value)}
+            value="ru"
+          >
+            <h2 className="text-white text-[20px]">rus</h2>
+          </button>
           <ul className="flex flex-col items-center justify-center gap-[20px]">
             <li className="text-[20px]">
               <a href="#asosiy">{t("navbar.navtext1")}</a>
@@ -102,7 +113,7 @@ const Navbar = () => {
         </div>
         <div className="bg-blue-500">
           <select
-            className="max-md:hidden"
+            className="max-sm:hidden"
             onChange={(e) => changelang(e.target.value)}
           >
             <option value="uz">uzb</option>

@@ -22,7 +22,6 @@ const Home = () => {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="mt-[80px]"
         >
           <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px]">
             {t("header.headertext")}
@@ -38,54 +37,21 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="mt-[10px] max-md:hidden mb-8">
+      <div className="max-md:hidden mb-8">
         <img data-aos="flip-right" className="mt-[100px]" src={Dzimg} alt="" />
       </div>
-      <div
-        id="biz"
-        className="w-full flex flex-col gap-[100px] max-md:mt-[100px]"
-      >
-        <div>
-          <h2 data-aos="flip-up" className="text-[40px] font-bold">
-            {t("header.headertext3")}
-          </h2>
+      <div className="w-full">
+        <div
+          id="biz"
+          className="w-full flex flex-col gap-[100px] max-md:mt-[100px]"
+        >
+          <div>
+            <h2 data-aos="flip-up" className="text-[40px] font-bold">
+              {t("header.headertext3")}
+            </h2>
+          </div>
+          <div className="border-t flex"></div>
         </div>
-        <div className="border-t flex">
-          <ul className="flex items-center justify-center max-lg:justify-between gap-[50px] lg:gap-[150px] max-md:px-[20px] flex-wrap mt-[100px] max-lg:flex-col w-full">
-            <li
-              data-aos="fade-right"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
-              className="p-[30px] lg:max-w-[280px] rounded-[20px] gap-[20px] shadow-2xl border"
-            >
-              <img src={Mask} alt="avfzallik rasm" />
-              <h2 className="text-[24px] font-bold">{t("ul1.textli1")}</h2>
-              <p className="text-[#676D83]">{t("ul1.textp1")}</p>
-            </li>
-            <li
-              data-aos="fade-right"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
-              className="p-[30px] rounded-[20px] lg:max-w-[280px] border shadow-2xl"
-            >
-              <img src={Mask2} alt="avfzallik rasm" />
-              <h2 className="text-[24px] font-bold">{t("ul1.textli2")}</h2>
-              <p className="text-[#676D83]">{t("ul1.textp2")}</p>
-            </li>
-            <li
-              data-aos="fade-right"
-              data-aos-offset="150"
-              data-aos-easing="ease-in-sine"
-              className=" p-[30px] lg:max-w-[280px] rounded-[20px] border shadow-2xl"
-            >
-              <img src={Mask3} alt="avfzallik rasm" />
-              <h2 className="text-[24px] font-bold">{t("ul1.textli3")}</h2>
-              <p className="text-[#676D83]">{t("ul1.textp3")}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="w-full mt-10">
         <div className="bg-disinfection flex items-center justify-end py-[40px]">
           <div
             data-aos="fade-down-left"
@@ -104,6 +70,38 @@ const Home = () => {
         </div>
       </div>
       <div id="xizmat">
+        <ul className="flex items-center max-lg:justify-between gap-[50px] lg:gap-[150px] max-md:px-[20px] flex-wrap mt-[100px]  w-full">
+          <li
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            className="p-[30px] lg:max-w-[280px] rounded-[20px] gap-[20px] shadow-2xl border"
+          >
+            <img src={Mask} alt="avfzallik rasm" />
+            <h2 className="text-[24px] font-bold">{t("ul1.textli1")}</h2>
+            <p className="text-[#676D83]">{t("ul1.textp1")}</p>
+          </li>
+          <li
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            className="p-[30px] rounded-[20px] lg:max-w-[280px] border shadow-2xl"
+          >
+            <img src={Mask2} alt="avfzallik rasm" />
+            <h2 className="text-[24px] font-bold">{t("ul1.textli2")}</h2>
+            <p className="text-[#676D83]">{t("ul1.textp2")}</p>
+          </li>
+          <li
+            data-aos="fade-right"
+            data-aos-offset="150"
+            data-aos-easing="ease-in-sine"
+            className=" p-[30px] lg:max-w-[280px] rounded-[20px] border shadow-2xl"
+          >
+            <img src={Mask3} alt="avfzallik rasm" />
+            <h2 className="text-[24px] font-bold">{t("ul1.textli3")}</h2>
+            <p className="text-[#676D83]">{t("ul1.textp3")}</p>
+          </li>
+        </ul>
         <div className="mt-[30px]">
           <h2 className="text-[52px] text-bold">{t("ul2.textsec1")}</h2>
           <p className="text-[24px]">{t("ul2.textsec2")}</p>
