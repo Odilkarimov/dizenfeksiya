@@ -1,20 +1,22 @@
 import Logo from "../../assets/Union.png";
 import Menu from "../../assets/menu.svg";
 import Close from "../../assets/close.svg";
+import Uzbflag from "../../assets/uzbflag.jpg";
+import Rusflag from "../../assets/rusflag.png";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const Navbar = () => {
+  const changelang = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  };
+  const { t } = useTranslation();
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -42,21 +44,30 @@ const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <div>
-          <ul className="flex flex-col items-center justify-center gap-[20px] max-md:hidden">
-            <li>
-              <a href="#asosiy">Asosiy</a>
+        <div
+          className="flex items-center justify-end px-[10px] cursor-pointer
+        "
+        >
+          <img src={Close} width={40} alt="" />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-[40px]">
+          <ul className="flex flex-col items-center justify-center gap-[20px]">
+            <li className="text-[20px]">
+              <a href="#asosiy">{t("navbar.navtext1")}</a>
             </li>
-            <li>
-              <a href="#biz">Biz xaqimizda</a>
+            <li className="text-[20px]">
+              <a href="#biz">{t("navbar.navtext2")}</a>
             </li>
-            <li>
-              <a href="#xizmat">Hizmatlar</a>
+            <li className="text-[20px]">
+              <a href="#xizmat">{t("navbar.navtext3")}</a>
             </li>
-            <li>
-              <a href="#faq">Faq</a>
+            <li className="text-[20px]">
+              <a href="#faq">{t("navbar.navtext4")}</a>
             </li>
           </ul>
+          <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center ">
+            <h3 className="text-[20px]">Bog'lanish</h3>
+          </button>
         </div>
       </List>
     </Box>
@@ -71,21 +82,27 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="flex items-center justify-center gap-[20px] max-md:hidden">
-            <li>
-              <a href="#asosiy">Asosiy</a>
+            <li className="text-[20px]">
+              <a href="#asosiy">{t("navbar.navtext1")}</a>
             </li>
-            <li>
-              <a href="#biz">Biz xaqimizda</a>
+            <li className="text-[20px]">
+              <a href="#biz">{t("navbar.navtext2")}</a>
             </li>
-            <li>
-              <a href="#xizmat">Hizmatlar</a>
+            <li className="text-[20px]">
+              <a href="#xizmat">{t("navbar.navtext3")}</a>
             </li>
-            <li>
-              <a href="#faq">Faq</a>
+            <li className="text-[20px]">
+              <a href="#faq">{t("navbar.navtext4")}</a>
             </li>
           </ul>
         </div>
-        <div>
+        <div className="bg-blue-500">
+          <select onChange={(e) => changelang(e.target.value)}>
+            <option value="uz">uzb</option>
+            <option value="ru">rus</option>
+          </select>
+        </div>
+        <div className="hidden max-lg:block">
           <img
             onClick={toggleDrawer("right", true)}
             src={Menu}
@@ -95,7 +112,7 @@ const Navbar = () => {
         </div>
         <div className="max-lg:hidden">
           <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] w-[200px] text-sm px-5 py-2.5 text-center ">
-            <h3 className="text-[20px]">Bog'lanish</h3>
+            <h3 className="text-[20px]">{t("button.btn")}</h3>
           </button>
         </div>
       </div>
