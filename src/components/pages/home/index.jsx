@@ -17,29 +17,37 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-between flex-wrap max-md:flex-col">
-      <div id="#asosiy">
-        <div
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-        >
-          <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px]">
-            {t("header.headertext")}
-          </h1>
-          <div className="flex">
-            <p className="flex max-w-[300px] text-[20px]">
-              {t("header.headertext2")}
-            </p>
-            <img className="" src={Dzn} alt="Dizinfeksiya" />
+      <div className="flex gap-[30px]">
+        <div id="#asosiy">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px]">
+              {t("header.headertext")}
+            </h1>
+            <div className="flex">
+              <p className="flex max-w-[300px] text-[20px]">
+                {t("header.headertext2")}
+              </p>
+              <img className="" src={Dzn} alt="Dizinfeksiya" />
+            </div>
+            <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[10px] ml-[20px]">
+              <h3 className="text-[25px] ">{t("button.btn")}</h3>
+            </button>
           </div>
-          <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[10px] ml-[20px]">
-            <h3 className="text-[25px] ">{t("button.btn")}</h3>
-          </button>
+        </div>
+        <div className="max-md:hidden mb-8">
+          <img
+            data-aos="flip-right"
+            className="mt-[100px]"
+            src={Dzimg}
+            alt=""
+          />
         </div>
       </div>
-      <div className="max-md:hidden mb-8">
-        <img data-aos="flip-right" className="mt-[100px]" src={Dzimg} alt="" />
-      </div>
+
       <div className="w-full">
         <div
           id="biz"
@@ -54,7 +62,7 @@ const Home = () => {
         </div>
         <div className="bg-disinfection flex items-center justify-end py-[40px]">
           <div
-            data-aos="fade-down-left"
+            data-aos="fade-right"
             className="flex items-start justify-center flex-col px-[30px]"
           >
             <h2 className="text-[40px] font-bold text-white max-w-[500px]">
@@ -75,7 +83,7 @@ const Home = () => {
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            className="p-[30px] lg:max-w-[280px] rounded-[20px] gap-[20px] shadow-2xl border"
+            className="p-[30px] rounded-[20px] lg:max-w-[300px] border shadow-2xl"
           >
             <img src={Mask} alt="avfzallik rasm" />
             <h2 className="text-[24px] font-bold">{t("ul1.textli1")}</h2>
@@ -85,7 +93,7 @@ const Home = () => {
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            className="p-[30px] rounded-[20px] lg:max-w-[280px] border shadow-2xl"
+            className="p-[30px] rounded-[20px] lg:max-w-[300px] border shadow-2xl"
           >
             <img src={Mask2} alt="avfzallik rasm" />
             <h2 className="text-[24px] font-bold">{t("ul1.textli2")}</h2>
@@ -95,7 +103,7 @@ const Home = () => {
             data-aos="fade-right"
             data-aos-offset="150"
             data-aos-easing="ease-in-sine"
-            className=" p-[30px] lg:max-w-[280px] rounded-[20px] border shadow-2xl"
+            className=" p-[30px] lg:max-w-[300px] lg:h-[358px] rounded-[20px] border shadow-2xl"
           >
             <img src={Mask3} alt="avfzallik rasm" />
             <h2 className="text-[24px] font-bold">{t("ul1.textli3")}</h2>
@@ -175,33 +183,33 @@ const Home = () => {
         </div>
       </div>
       <div id="faq" className="w-full border-t mt-[80px] max-md:mt-[20px]">
-        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[10px] py-[40px] px-[20px]">
+        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[25px] py-[40px] px-[20px]">
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
               {t("accordion.title1")}
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[22px]">
+              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[20px]">
                 {t("accordion.content1")}
               </p>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
               {t("accordion.title2")}
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[22px]">
+              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[20px]">
                 {t("accordion.content2")}
               </p>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[25px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
               {t("accordion.title3")}
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[22px]">
+              <p className="mb-2 text-gray-500 dark:text-gray-400 text-[20px]">
                 {t("accordion.content3")}
               </p>
             </Accordion.Content>

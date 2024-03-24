@@ -26,10 +26,16 @@
 }
 
 .bg_section {
-  background: radial-gradient(95.44% 490.36% at 92.87% 11.25%, #33A9FF 0%, #33FFF3 100%) ;
-
+  background: radial-gradient(
+    95.44% 490.36% at 92.87% 11.25%,
+    #33a9ff 0%,
+    #33fff3 100%
+  );
 }
 .bg_section2 {
-  background: radial-gradient(58.39% 328.01% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, 0.2) 100%);
-
+  background: radial-gradient(
+    58.39% 328.01% at 51.32% 69.21%,
+    #3da0fc 0%,
+    rgba(2, 227, 214, 0.2) 100%
+  );
 }

@@ -1,15 +1,12 @@
 import Logo from "../../assets/Union.png";
 import Menu from "../../assets/menu.svg";
 import Close from "../../assets/close.svg";
-import Uzbflag from "../../assets/uzbflag.jpg";
-import Rusflag from "../../assets/rusflag.png";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import List from "@mui/material/List";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-import { Button } from "flowbite-react";
 
 const Navbar = () => {
   const changelang = (lang) => {
@@ -46,26 +43,28 @@ const Navbar = () => {
     >
       <List>
         <div
-          className="flex items-center justify-end px-[10px] cursor-pointer
+          className="flex items-center justify-end px-[10px] cursor-pointer mb-[20px]
         "
         >
           <img src={Close} width={40} alt="" />
         </div>
         <div className="flex flex-col items-center justify-center gap-[40px]">
-          <button
-            className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
-            onClick={(e) => changelang(e.target.value)}
-            value="uz"
-          >
-            <h2 className="text-white text-[20px]">uzb</h2>
-          </button>
-          <button
-            className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
-            onClick={(e) => changelang(e.target.value)}
-            value="ru"
-          >
-            <h2 className="text-white text-[20px]">rus</h2>
-          </button>
+          <div className="flex items-center gap-[10px]">
+            <button
+              className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
+              onClick={(e) => changelang(e.target.value)}
+              value="uz"
+            >
+              <h2 className="text-white text-[20px]">uzb</h2>
+            </button>
+            <button
+              className="flex items-center justify-center gap-[10px] bg-blue-500 w-[100px] rounded-lg p-[5px]"
+              onClick={(e) => changelang(e.target.value)}
+              value="ru"
+            >
+              <h2 className="text-white text-[20px]">rus</h2>
+            </button>
+          </div>
           <ul className="flex flex-col items-center justify-center gap-[20px]">
             <li className="text-[20px]">
               <a href="#asosiy">{t("navbar.navtext1")}</a>

@@ -10,8 +10,14 @@ const Footer = () => {
           <img src={Logo} alt="Icon" />
           <h2 className="text-[30px] font-bold">Dizinfeksiya</h2>
         </div>
-        <div className="flex flex-col items-start  justify-center gap-[20px]">
-          <div className="flex items-center justify-center gap-[20px] cursor-pointer">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col items-start  justify-center gap-[20px]"
+        >
+          <div
+            data-aos="fade-right"
+            className="flex items-center justify-center gap-[20px] cursor-pointer"
+          >
             <img src={Locat} alt="locatsiya icon" />
             <h2>O'zbekiston, Toshkent sh</h2>
             <img
