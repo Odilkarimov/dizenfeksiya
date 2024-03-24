@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center justify-center gap-[20px] cursor-pointer">
             <img src={Tel} alt="Tel icon" />
-            <h2>+998991199933</h2>
+            <h2><a href="+998990080614">+998990080614</a></h2>
             <img
               className="w-[40px] transform rotate-180"
               src="https://cdn.icon-icons.com/icons2/1674/PNG/512/diagonalarrowleftdown_110984.png"

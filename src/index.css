@@ -39,3 +39,6 @@
     rgba(2, 227, 214, 0.2) 100%
   );
 }
+.bg_dizinfeks {
+  background-image: url(../src/assets/dzimg.png);
+}

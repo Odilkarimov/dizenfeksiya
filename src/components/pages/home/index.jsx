@@ -17,21 +17,21 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-between flex-wrap max-md:flex-col">
-      <div className="flex gap-[30px]">
+      <div className="flex gap-[30px] bg_dizinfeks bg-cover md:bg-none w-full p-[20px] rounded-lg mt-[50px] justify-center items-center">
         <div id="#asosiy">
           <div
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
           >
-            <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px]">
+            <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px] mb-[20px] max-md:text-white">
               {t("header.headertext")}
             </h1>
             <div className="flex">
-              <p className="flex max-w-[300px] text-[20px]">
+              <p className="flex max-w-[300px] text-[20px] max-md:text-white">
                 {t("header.headertext2")}
               </p>
-              <img className="" src={Dzn} alt="Dizinfeksiya" />
+              <img className="max-md:hidden" src={Dzn} alt="" />
             </div>
             <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[10px] ml-[20px]">
               <h3 className="text-[25px] ">{t("button.btn")}</h3>
@@ -41,9 +41,9 @@ const Home = () => {
         <div className="max-md:hidden mb-8">
           <img
             data-aos="flip-right"
-            className="mt-[100px]"
+            className=" w-[750px] h-[650px]"
             src={Dzimg}
-            alt=""
+            alt="dizinfeksiya img"
           />
         </div>
       </div>
@@ -78,7 +78,7 @@ const Home = () => {
         </div>
       </div>
       <div id="xizmat">
-        <ul className="flex items-center max-lg:justify-between gap-[50px] lg:gap-[150px] max-md:px-[20px] flex-wrap mt-[100px]  w-full">
+        <ul className="flex items-center lg:justify-between gap-[50px] lg:gap-[150px] max-md:px-[20px] flex-wrap mt-[100px]  w-full">
           <li
             data-aos="fade-right"
             data-aos-offset="200"

@@ -110,9 +110,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="bg-blue-500">
+        <div className="bg-blue-500 rounded-2xl">
           <select
-            className="max-sm:hidden"
+            className="max-sm:hidden rounded-2xl"
             onChange={(e) => changelang(e.target.value)}
           >
             <option value="uz">uzb</option>
