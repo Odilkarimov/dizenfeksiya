@@ -14,6 +14,9 @@ import { Button, TextInput } from "flowbite-react";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const telegramApi = "6985896624:AAHe1qZaRDPih-QpWSSrwi8ZDbBEH_QcYgQ"
+
+
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-between flex-wrap max-md:flex-col">
