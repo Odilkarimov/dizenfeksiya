@@ -14,8 +14,7 @@ import { Button, TextInput } from "flowbite-react";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const telegramApi = "6985896624:AAHe1qZaRDPih-QpWSSrwi8ZDbBEH_QcYgQ"
-
+  const telegramApi = "6985896624:AAHe1qZaRDPih-QpWSSrwi8ZDbBEH_QcYgQ";
 
   const { t } = useTranslation();
   return (
@@ -26,6 +25,7 @@ const Home = () => {
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
+            className="px-[10px]"
           >
             <h1 className="text-[64px] text-[#3375FF] font-bold max-md:text-[45px] max-w-[200px] mb-[20px] max-lg:text-white">
               {t("header.headertext")}
@@ -63,15 +63,15 @@ const Home = () => {
           </div>
           <div className="border-t flex"></div>
         </div>
-        <div className="bg-disinfection flex items-center justify-end py-[40px]">
+        <div className="bg-disinfection flex items-center justify-end py-[40px] rounded-lg">
           <div
             data-aos="fade-right"
             className="flex items-start justify-center flex-col px-[30px]"
           >
-            <h2 className="text-[40px] font-bold text-white max-w-[500px]">
+            <h2 className="text-[40px] max-md:text-[35px] font-bold text-white max-w-[500px]">
               {t("img.text1")}
             </h2>
-            <p className="text-[16px] text-white max-w-[300px]">
+            <p className="text-[20px] text-white max-w-[300px]">
               {t("img.text2")}
             </p>
             <button className="text-white bg-blue-700 hover:opacity-70 rounded-[30px] text-sm px-5 py-2.5 text-center w-[200px] mt-[20px]">
@@ -168,7 +168,7 @@ const Home = () => {
           </ul>
         </div>
       </div>
-      <div className="bg_section max-w-[1300px]  w-full  h-full flex items-center gap-[100px] p-[50px] mt-[100px] rounded-2xl max-md:flex max-md:flex-col">
+      <div className="bg_section max-w-[1300px]  w-full  h-full flex items-center gap-[100px] p-[50px] max-md:px-[30px] mt-[100px] rounded-2xl max-md:flex max-md:flex-col">
         <div className="w-[50%] max-md:w-[100%]">
           <img src={Obrazovaniya} alt="" />
         </div>
@@ -176,7 +176,7 @@ const Home = () => {
           <img data-aos="zoom-in-down" src={Icon3d} alt="" />
           <h2
             data-aos="zoom-in-down"
-            className="text-white text-[32px] font-bold max-w-[400px]"
+            className="text-white text-[32px] font-bold max-w-[400px] max-md:text-28px]"
           >
             {t("img.text3")}
           </h2>
@@ -186,9 +186,9 @@ const Home = () => {
         </div>
       </div>
       <div id="faq" className="w-full border-t mt-[80px] max-md:mt-[20px]">
-        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[25px] py-[40px] px-[20px]">
+        <Accordion className="mt-[50px] max-md:mt-[20px] flex flex-col gap-[25px] py-[20px] px-[10px]">
           <Accordion.Panel>
-            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[100px] rounded-lg">
               {t("accordion.title1")}
             </Accordion.Title>
             <Accordion.Content>
@@ -198,7 +198,7 @@ const Home = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[100px] rounded-lg">
               {t("accordion.title2")}
             </Accordion.Title>
             <Accordion.Content>
@@ -208,7 +208,7 @@ const Home = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title className="text-[22px] text-black h-[80px] rounded-lg">
+            <Accordion.Title className="text-[22px] text-black h-[115px] rounded-lg px-[10px]">
               {t("accordion.title3")}
             </Accordion.Title>
             <Accordion.Content>
@@ -224,7 +224,9 @@ const Home = () => {
           data-aos="fade-up-right"
           className="bg-[#fff] rounded-2xl max-md:w-full max-w-[450px] w-full px-[20px] py-[20px]"
         >
-          <h2 className="text-[30px] font-bold">{t("accordion.content4")}</h2>
+          <h2 className="text-[30px] font-bold max-sm:text-[25px]">
+            {t("accordion.content4")}
+          </h2>
           <form className="flex flex-col gap-4 w-full">
             <div className="mt-[30px]">
               <TextInput

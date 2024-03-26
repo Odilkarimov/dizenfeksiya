@@ -92,7 +92,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between mt-[20px] py-[20px] px-[20px]">
         <div className="flex">
           <img src={Logo} alt="Dizinfeksiya logo" />
-          <h3 className="text-[35px] font-bold">Dizinfeksiya</h3>
+          <h3 className="text-[35px] font-bold max-sm:text-[25px]">
+            Dizinfeksiya
+          </h3>
         </div>
         <div>
           <ul className="flex items-center justify-center gap-[20px] max-lg:hidden">
